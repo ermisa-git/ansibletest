@@ -1,0 +1,7 @@
+---
+- name: Test connectivity to all managed hosts
+  hosts: all
+  gather_facts: false  # Disable gathering facts since this is just a connectivity test
+  tasks:
+    - name: Ping managed hosts
+      ansible.builtin.ping:
